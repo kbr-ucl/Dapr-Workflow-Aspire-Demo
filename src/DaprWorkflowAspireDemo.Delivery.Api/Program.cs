@@ -24,6 +24,10 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+// Dapr configurations
+app.UseCloudEvents();
+app.MapSubscribeHandler();
+
 app.MapControllers();
 
 app.Run();

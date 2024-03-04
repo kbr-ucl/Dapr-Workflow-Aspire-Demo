@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CrossCut\CrossCut.csproj" />
     <ProjectReference Include="..\DaprWorkflowAspireDemo.ServiceDefaults\DaprWorkflowAspireDemo.ServiceDefaults.csproj" />
   </ItemGroup>
 

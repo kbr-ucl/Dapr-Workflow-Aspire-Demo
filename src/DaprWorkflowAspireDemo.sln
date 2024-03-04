@@ -18,6 +18,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprWorkflowAspireDemo.Kitc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprWorkflowAspireDemo.Delivery.Api", "DaprWorkflowAspireDemo.Delivery.Api\DaprWorkflowAspireDemo.Delivery.Api.csproj", "{5BFFD897-917B-4358-A5ED-99A066FA6934}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCut", "CrossCut", "{A1028218-E96B-4F2C-954A-486DAC832DDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCut", "CrossCut\CrossCut.csproj", "{CA226580-E93C-4BD6-A2F7-F1819A218F18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,10 @@ Global
 		{5BFFD897-917B-4358-A5ED-99A066FA6934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BFFD897-917B-4358-A5ED-99A066FA6934}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BFFD897-917B-4358-A5ED-99A066FA6934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA226580-E93C-4BD6-A2F7-F1819A218F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA226580-E93C-4BD6-A2F7-F1819A218F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA226580-E93C-4BD6-A2F7-F1819A218F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA226580-E93C-4BD6-A2F7-F1819A218F18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +60,7 @@ Global
 		{0701D185-CDD2-4D86-8707-9BD57DF7FDBB} = {514997E2-DDBC-489A-9F3C-B02D2F7F14D7}
 		{D8E7C92C-C501-45BD-8DC1-8720CFA3DCD2} = {7F399F39-27B8-4A20-9D76-39D2C68CAE70}
 		{5BFFD897-917B-4358-A5ED-99A066FA6934} = {39F9BA46-4178-43A1-B955-5AA26A4A29E4}
+		{CA226580-E93C-4BD6-A2F7-F1819A218F18} = {A1028218-E96B-4F2C-954A-486DAC832DDD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C7BAD52-DE88-4F88-82D6-936BF4EA6D84}

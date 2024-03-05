@@ -40,3 +40,10 @@ https://github.com/dotnet/aspire-samples/blob/main/samples/AspireWithDapr/Aspire
 
 ________________________________
 
+IntegrationEvents
+
+- OrderCreated
+- PaymentSuccesful
+- OrderCooked
+- OrderDelivered
+

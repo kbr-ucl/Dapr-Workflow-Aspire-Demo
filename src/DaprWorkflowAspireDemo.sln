@@ -30,6 +30,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{AF5B1401-C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprWorkflowAspireDemo.IntegrationTests.Api", "DaprWorkflowAspireDemo.IntegrationTests.Api\DaprWorkflowAspireDemo.IntegrationTests.Api.csproj", "{831E785B-EFA6-44C2-96DF-97EF8517515C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{0E9D6060-6966-4AFE-A16F-5CC31992530C}"
+	ProjectSection(SolutionItems) = preProject
+		components\delivery-store.yaml = components\delivery-store.yaml
+		components\kitchen-store.yaml = components\kitchen-store.yaml
+		components\order-store.yaml = components\order-store.yaml
+		components\payment-store.yaml = components\payment-store.yaml
+		components\pubsub.yaml = components\pubsub.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

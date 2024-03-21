@@ -34,6 +34,7 @@ public class ReserveInventoryActivity : WorkflowActivity<InventoryItemCreateRese
 
         // Not enough items, or item does not exsists.
         return new InventoryItemReservationResult(false, result.OrderPayload);
+        // test
 
         //var item = await _client.GetStateAsync<InventoryItem>(
         //    StoreName,

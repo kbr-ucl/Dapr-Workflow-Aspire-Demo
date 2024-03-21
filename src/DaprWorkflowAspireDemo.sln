@@ -8,13 +8,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprWorkflowAspireDemo.Serv
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{514997E2-DDBC-489A-9F3C-B02D2F7F14D7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kitchen", "Kitchen", "{7F399F39-27B8-4A20-9D76-39D2C68CAE70}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Warehouse", "Warehouse", "{7F399F39-27B8-4A20-9D76-39D2C68CAE70}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delivery", "Delivery", "{39F9BA46-4178-43A1-B955-5AA26A4A29E4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprWorkflowAspireDemo.Order.Api", "DaprWorkflowAspireDemo.Order.Api\DaprWorkflowAspireDemo.Order.Api.csproj", "{0701D185-CDD2-4D86-8707-9BD57DF7FDBB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprWorkflowAspireDemo.Kitchen.Api", "DaprWorkflowAspireDemo.Kitchen.Api\DaprWorkflowAspireDemo.Kitchen.Api.csproj", "{D8E7C92C-C501-45BD-8DC1-8720CFA3DCD2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprWorkflowAspireDemo.Delivery.Api", "DaprWorkflowAspireDemo.Delivery.Api\DaprWorkflowAspireDemo.Delivery.Api.csproj", "{5BFFD897-917B-4358-A5ED-99A066FA6934}"
 EndProject
@@ -33,11 +31,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{0E9D6060-6966-4AFE-A16F-5CC31992530C}"
 	ProjectSection(SolutionItems) = preProject
 		components\delivery-store.yaml = components\delivery-store.yaml
-		components\kitchen-store.yaml = components\kitchen-store.yaml
 		components\order-store.yaml = components\order-store.yaml
 		components\payment-store.yaml = components\payment-store.yaml
 		components\pubsub.yaml = components\pubsub.yaml
+		components\warehouse-store.yaml = components\warehouse-store.yaml
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprWorkflowAspireDemo.Warehouse.Api", "DaprWorkflowAspireDemo.Warehouse.Api\DaprWorkflowAspireDemo.Warehouse.Api.csproj", "{9A4E7CB2-2A37-4DF5-BF8B-2C89FCEEE0D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,10 +57,6 @@ Global
 		{0701D185-CDD2-4D86-8707-9BD57DF7FDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0701D185-CDD2-4D86-8707-9BD57DF7FDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0701D185-CDD2-4D86-8707-9BD57DF7FDBB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8E7C92C-C501-45BD-8DC1-8720CFA3DCD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8E7C92C-C501-45BD-8DC1-8720CFA3DCD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8E7C92C-C501-45BD-8DC1-8720CFA3DCD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8E7C92C-C501-45BD-8DC1-8720CFA3DCD2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5BFFD897-917B-4358-A5ED-99A066FA6934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5BFFD897-917B-4358-A5ED-99A066FA6934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BFFD897-917B-4358-A5ED-99A066FA6934}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -77,17 +73,21 @@ Global
 		{831E785B-EFA6-44C2-96DF-97EF8517515C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{831E785B-EFA6-44C2-96DF-97EF8517515C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{831E785B-EFA6-44C2-96DF-97EF8517515C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4E7CB2-2A37-4DF5-BF8B-2C89FCEEE0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4E7CB2-2A37-4DF5-BF8B-2C89FCEEE0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4E7CB2-2A37-4DF5-BF8B-2C89FCEEE0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4E7CB2-2A37-4DF5-BF8B-2C89FCEEE0D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0701D185-CDD2-4D86-8707-9BD57DF7FDBB} = {514997E2-DDBC-489A-9F3C-B02D2F7F14D7}
-		{D8E7C92C-C501-45BD-8DC1-8720CFA3DCD2} = {7F399F39-27B8-4A20-9D76-39D2C68CAE70}
 		{5BFFD897-917B-4358-A5ED-99A066FA6934} = {39F9BA46-4178-43A1-B955-5AA26A4A29E4}
 		{CA226580-E93C-4BD6-A2F7-F1819A218F18} = {A1028218-E96B-4F2C-954A-486DAC832DDD}
 		{AC062EA3-91E8-4C9D-90DA-C8C61B4B3773} = {B8577323-B48D-44E8-BA90-4E8858399196}
 		{831E785B-EFA6-44C2-96DF-97EF8517515C} = {AF5B1401-C465-461A-AE0E-2BD1E593CFBC}
+		{9A4E7CB2-2A37-4DF5-BF8B-2C89FCEEE0D2} = {7F399F39-27B8-4A20-9D76-39D2C68CAE70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C7BAD52-DE88-4F88-82D6-936BF4EA6D84}

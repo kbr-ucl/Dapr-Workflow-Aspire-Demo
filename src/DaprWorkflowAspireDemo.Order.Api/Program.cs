@@ -1,3 +1,6 @@
+using Dapr.Workflow;
+using DaprWorkflowAspireDemo.Order.Api.Activities;
+using DaprWorkflowAspireDemo.Order.Api.Workflows;
 using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +15,20 @@ var jsonOpt = new JsonSerializerOptions()
 };
 
 builder.Services.AddControllers().AddDapr(opt => opt.UseJsonSerializationOptions(jsonOpt));
+
+builder.Services.AddDaprWorkflow(options =>
+{
+    // Note that it's also possible to register a lambda function as the workflow
+    // or activity implementation instead of a class.
+    options.RegisterWorkflow<OrderProcessingWorkflow>();
+
+    // These are the activities that get invoked by the workflow(s).
+    options.RegisterActivity<NotifyActivity>();
+    options.RegisterActivity<ProcessPaymentActivity>();
+    options.RegisterActivity<RequestApprovalActivity>();
+    options.RegisterActivity<ReserveInventoryActivity>();
+    options.RegisterActivity<UpdateInventoryActivity>();
+});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -29,7 +29,7 @@ public class PingServices : ControllerBase
         }
         catch (Exception e)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, $"Kitchen is down: {e.Message}");
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Order is down: {e.Message}");
         }
     }
 
@@ -46,24 +46,24 @@ public class PingServices : ControllerBase
         }
         catch (Exception e)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, $"Kitchen is down: {e.Message}");
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Payment is down: {e.Message}");
         }
     }
 
-    [HttpGet("/ping-kitchen")]
+    [HttpGet("/ping-warehouse")]
     public async Task<IActionResult> PingKitchen(CancellationToken cancellationToken)
     {
         try
         {
             var command = new PingCommand();
-            var response = await _daprClient.InvokeMethodAsync<PingCommand, PingResponse>("kitchen", "ping", command,
+            var response = await _daprClient.InvokeMethodAsync<PingCommand, PingResponse>("warehouse", "ping", command,
                 cancellationToken);
             Console.WriteLine($"Returned: {response.Message}");
-            return Ok($"Kitchen is up and running: {response.Message}");
+            return Ok($"Warehouse is up and running: {response.Message}");
         }
         catch (Exception e)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, $"Kitchen is down: {e.Message}");
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Warehouse is down: {e.Message}");
         }
     }
 
@@ -81,7 +81,7 @@ public class PingServices : ControllerBase
         }
         catch (Exception e)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, $"Kitchen is down: {e.Message}");
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Delivery is down: {e.Message}");
         }
     }
 
@@ -101,10 +101,10 @@ public class PingServices : ControllerBase
                 cancellationToken);
             responses.Add($"Payment is up and running: {responsePayment.Message}");
 
-            var responseKitchen = await _daprClient.InvokeMethodAsync<PingCommand, PingResponse>("kitchen", "ping",
+            var responseKitchen = await _daprClient.InvokeMethodAsync<PingCommand, PingResponse>("warehouse", "ping",
                 command,
                 cancellationToken);
-            responses.Add($"Kitchen is up and running: {responseKitchen.Message}");
+            responses.Add($"Warehouse is up and running: {responseKitchen.Message}");
 
             var responseDelivery = await _daprClient.InvokeMethodAsync<PingCommand, PingResponse>("delivery", "ping",
                 command,

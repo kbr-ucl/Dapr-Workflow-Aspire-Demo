@@ -1,0 +1,20 @@
+## Run workflow
+@dapr_url=http://localhost:50895
+@workflow_id={{$guid}}
+
+# @name wfrequest
+POST {{dapr_url}}/v1.0-alpha1/workflows/dapr/OrderProcessingWorkflow/start?instanceID={{workflow_id}}
+Content-Type: application/json
+
+{
+    "ItemId": 1,
+    "ItemName": "Paperclips",
+    "Quantity": 25
+}
+
+### Get status
+
+@workflow_id_response={{wfrequest.response.body.instanceID}}
+
+GET {{dapr_url}}/v1.0-alpha1/workflows/dapr/{{workflow_id_response}}
+

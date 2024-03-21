@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -16,7 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DaprWorkflowAspireDemo.Delivery.Api\DaprWorkflowAspireDemo.Delivery.Api.csproj" />
     <ProjectReference Include="..\DaprWorkflowAspireDemo.IntegrationTests.Api\DaprWorkflowAspireDemo.IntegrationTests.Api.csproj" />
-    <ProjectReference Include="..\DaprWorkflowAspireDemo.Kitchen.Api\DaprWorkflowAspireDemo.Kitchen.Api.csproj" />
+    <ProjectReference Include="..\DaprWorkflowAspireDemo.Warehouse.Api\DaprWorkflowAspireDemo.Warehouse.Api.csproj" />
     <ProjectReference Include="..\DaprWorkflowAspireDemo.Order.Api\DaprWorkflowAspireDemo.Order.Api.csproj" />
     <ProjectReference Include="..\DaprWorkflowAspireDemo.Payment.Api\DaprWorkflowAspireDemo.Payment.Api.csproj" />
   </ItemGroup>
